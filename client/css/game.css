@@ -509,8 +509,8 @@ div.tableDivWrap td div.CenterStart a {
 }
 
 div.tableDivWrap td div.BlankLetter a {
-    border-left: 0.2em solid #adff2f;
-    border-right: 0.2em solid #adff2f;
+    /* border-left: 0.2em solid #adff2f; */
+    /* border-right: 0.2em solid #adff2f; */
 }
 
 div.tableDivWrap td.Invalid {
