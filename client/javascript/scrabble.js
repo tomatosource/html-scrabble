@@ -423,10 +423,10 @@ function Board() {
 	    var centerStart = false;
 
 	    var square = new Square('Normal', this);
-	    
+
 	    var middle = Math.floor(this.Dimension / 2);
 	    var halfMiddle = Math.ceil(middle / 2);
-	    
+
 	    if ((x == 0 || x == this.Dimension - 1 || x == middle)
 		&& (y == 0 || y == this.Dimension - 1 || y == middle && x != middle)) {
 		square = new Square('TripleWord', this);
@@ -512,7 +512,7 @@ function Rack(size) {
 Rack.prototype.emptyTiles = function() {
     for (var x = 0; x < this.squares.length; x++) {
 	var square = this.squares[x];
-	
+
 	square.placeTile(null);
     }
 };
@@ -569,18 +569,18 @@ LetterBag.create = function(language) {
     }
     for (var i = 0; i < letterDistribution.length; ++i) {
 	var letterDefinition = letterDistribution[i];
-	
+
 	var tile = new Tile(letterDefinition.letter || " ", letterDefinition.score);
         if (letterDefinition.letter) {
             letterBag.legalLetters += letterDefinition.letter;
         }
-	
+
 	for (var n = 0; n < letterDefinition.count; ++n) {
 	    var tile = new Tile(letterDefinition.letter || " ", letterDefinition.score);
 	    letterBag.tiles.push(tile);
 	}
     }
-    
+
     return letterBag;
 };
 
@@ -635,9 +635,9 @@ function calculateMove(squares)
     if (!squares[7][7].tile) {
         return { error: "start field must be used" };
     }
-    
+
     // Determine that the placement of the Tile(s) is legal
-    
+
     // Find top-leftmost placed tile
     var x;
     var y;
@@ -656,13 +656,13 @@ function calculateMove(squares)
     if (!tile) {
         return { error: "no new tile found" };
     }
-    
+
     // Remember which newly placed tile positions are legal
     var legalPlacements = MakeBoardArray();
     legalPlacements[topLeftX][topLeftY] = true;
 
     function touchingOld(x, y) {
-        var retval = 
+        var retval =
         (x > 0 && squares[x - 1][y].tile && squares[x - 1][y].tileLocked)
             || (x < 14 && squares[x + 1][y].tile && squares[x + 1][y].tileLocked)
             || (y > 0 && squares[x][y - 1].tile && squares[x][y - 1].tileLocked)
@@ -694,7 +694,7 @@ function calculateMove(squares)
     }
 
     if (!isTouchingOld && !legalPlacements[7][7]) {
-        return { error: 'not touching old tile ' + topLeftX + '/' + topLeftY };
+        return { error: 'Not touching old tile ' + topLeftX + '/' + topLeftY };
     }
 
     // Check whether there are any unconnected other placements, count total tiles on board
@@ -705,14 +705,14 @@ function calculateMove(squares)
             if (square.tile) {
                 totalTiles++;
                 if (!square.tileLocked && !legalPlacements[x][y]) {
-                    return { error: 'unconnected placement' };
+                    return { error: 'Unconnected placement' };
                 }
             }
         }
     }
 
     if (totalTiles == 1) {
-        return { error: 'first word must consist of at least two letters' };
+        return { error: 'First word must consist of at least two letters' };
     }
 
     var move = { words: [] };
