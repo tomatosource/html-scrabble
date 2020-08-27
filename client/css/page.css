@@ -52,4 +52,12 @@ input {
     font-family: "Lobster";
     margin: 48px;
 }
+
+.gamesSubtitle {
+    color: white;
+    font-weight: bold;
+    font-size: 31px;
+    text-align: center;
+    font-family: "Lobster";
+    margin: 24px;
 }
