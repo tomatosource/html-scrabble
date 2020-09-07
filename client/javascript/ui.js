@@ -299,7 +299,7 @@ function UI(game) {
                 }
                 ui.remainingTileCounts = turn.remainingTileCounts;
                 if (turn.whosTurn == ui.playerNumber) {
-                    ui.playAudio("yourturn");
+                    // ui.playAudio("yourturn");
                 }
                 ui.boardLocked(turn.whosTurn != ui.playerNumber);
                 ui.removeMoveEditButtons();
@@ -1051,7 +1051,7 @@ UI.prototype.commitMove = function() {
         }
         this.endMove();
         if (move.tilesPlaced.length == 7) {
-            ui.playAudio("applause");
+            // ui.playAudio("applause");
         }
         for (var i = 0; i < move.tilesPlaced.length; i++) {
             var tilePlaced = move.tilesPlaced[i];
