@@ -63,37 +63,35 @@ input {
 }
 
 .reigningChamp {
-    color: white;
+    color: green;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 15px;
     text-align: center;
     font-family: "Lobster";
-    animation:1s blinker linear infinite;
-    -webkit-animation:1s blinker linear infinite;
-    -moz-animation:1s blinker linear infinite;
+    /* animation:1s blinker linear infinite; */
+    /* -webkit-animation:1s blinker linear infinite; */
+    /* -moz-animation:1s blinker linear infinite; */
 
-     color: red;
-    }
+     /* color: red; */
+    /* } */
 
-    @-moz-keyframes blinker {
-     0% { opacity: 1.0; }
-     50% { opacity: 0.2; }
-     100% { opacity: 1.0; }
-     }
+    /* @-moz-keyframes blinker { */
+     /* 0% { opacity: 1.0; } */
+     /* 50% { opacity: 0.2; } */
+     /* 100% { opacity: 1.0; } */
+     /* } */
 
-    @-webkit-keyframes blinker {
-     0% { opacity: 1.0; }
-     50% { opacity: 0.2; }
-     100% { opacity: 1.0; }
-     }
+    /* @-webkit-keyframes blinker { */
+     /* 0% { opacity: 1.0; } */
+     /* 50% { opacity: 0.2; } */
+     /* 100% { opacity: 1.0; } */
+     /* } */
 
-    @keyframes blinker {
-     0% { opacity: 1.0; }
-     50% { opacity: 0.2; }
-     100% { opacity: 1.0; }
-     }
-
-
+    /* @keyframes blinker { */
+     /* 0% { opacity: 1.0; } */
+     /* 50% { opacity: 0.2; } */
+     /* 100% { opacity: 1.0; } */
+     /* } */
 }
 
 
